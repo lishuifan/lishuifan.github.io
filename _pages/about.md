@@ -9,8 +9,6 @@ profile:
   image: lishui_fan_profile.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Zhejiang University<br>Computer Science Ph.D.</p>
-    <p>Advised by <a href="https://zhongxin-liu.github.io/" rel="external nofollow noopener" target="_blank">Zhongxin Liu</a> and Shanping Li</p>
     <p><a href="mailto:flscode@zju.edu.cn">flscode@zju.edu.cn</a></p>
     <p>Hangzhou, China</p>
 
@@ -171,7 +169,7 @@ latest_posts:
 }
 </style>
 
-I am a third-year Ph.D. student at the College of Computer Science and Technology, Zhejiang University, advised by [Zhongxin Liu](https://zhongxin-liu.github.io/) and Shanping Li. My research focuses on **large language models for code generation**, with broader interests in large language models, code-change understanding, and coding agents. I was fortunate to intern at Alibaba Future Life Lab and ByteDance Douyin AI4SE. Over the past two years, I have published or had accepted four first-author CCF-A papers in software engineering and related areas, including work in **ACM TOSEM**, **ASE**, and **ACL**.
+I am a **third-year Ph.D. student** at the College of Computer Science and Technology, Zhejiang University, advised by **[Zhongxin Liu](https://zhongxin-liu.github.io/) and Shanping Li**. My research focuses on **large language models for code generation**, with broader interests in large language models, **code-change understanding**, and **coding agents**. I was fortunate to intern at **Alibaba Future Life Lab** and **ByteDance Douyin AI4SE**. Over the past two years, I have published or had accepted **four first-author CCF-A papers** in software engineering and related areas, including work in **ACM TOSEM**, **ASE**, and **ACL**.
 
 <div class="research-focus">
   <span>Code generation</span>
