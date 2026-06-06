@@ -1,0 +1,10 @@
+---
+version: 1
+overrides:
+  assets/js/no_defer.js:
+    owner: al_folio_core
+    gem_version: 1.0.11
+    upstream_path: assets/js/no_defer.js
+    upstream_sha256: 30c1e442becaefce36dba46082f93dc21c8334f102301cb8f1d08ceb7e0aad51
+    local_sha256: 1214985a1e8c5bfd5ec25cb68e97cf0b057c12dc87cea69d290a6cfad6e6fbbe
+    acknowledged_at: "2026-06-06"
