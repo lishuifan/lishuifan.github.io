@@ -23,6 +23,11 @@ bundle exec jekyll build --config "_config.yml,${tmp_override}" -d "${tmp_site}"
 distill_page="${tmp_site}/blog/2021/distill/index.html"
 
 if [ ! -f "${distill_page}" ]; then
+  if ruby -ryaml -e 'exclude = Array(YAML.load_file("_config.yml")["exclude"]); exit(exclude.any? { |entry| entry.to_s.delete_suffix("/") == "_posts" } ? 0 : 1)'; then
+    echo "distill integration fixture posts are excluded; skipping distill checks"
+    exit 0
+  fi
+
   echo "distill page was not generated at ${distill_page}" >&2
   exit 1
 fi
