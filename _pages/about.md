@@ -6,7 +6,7 @@ subtitle: Ph.D. Student, College of Computer Science and Technology, Zhejiang Un
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Zhejiang University</p>
