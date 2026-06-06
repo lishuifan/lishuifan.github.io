@@ -1,10 +1,7 @@
 cv:
   name: Lishui Fan
-  label: Ph.D. Student in Computer Science
   email: flscode@zju.edu.cn
   location: Hangzhou, China
-  image: ""
-  summary: Third-year Ph.D. student at Zhejiang University, working on LLM-based code generation, code-change understanding, and software engineering intelligence.
 
   social_networks:
     - network: GitHub
@@ -18,11 +15,11 @@ cv:
         location: Hangzhou, China
         area: Computer Science and Technology
         studyType: Ph.D. Student
-        start_date: 2023
-        end_date: Present
+        start_date: "2023"
+        end_date: present
         highlights:
           - College of Computer Science and Technology.
-          - Research focus: LLM-based code generation and software engineering.
+          - "Research focus: LLM-based code generation and software engineering."
 
     Experience:
       - company: ByteDance Douyin AI4SE
@@ -64,7 +61,7 @@ cv:
           - Xin Xia
           - Shanping Li
         publisher: ACM Transactions on Software Engineering and Methodology
-        releaseDate: 2025
+        releaseDate: "2025"
         url: https://doi.org/10.1145/3709358
         summary: A CCF-A journal article studying LLMs for code-change-related tasks.
 
@@ -77,7 +74,7 @@ cv:
           - Xin Xia
           - Shanping Li
         publisher: ASE 2025
-        releaseDate: 2025
+        releaseDate: "2025"
         url: https://doi.org/10.1109/ASE63991.2025.00114
         summary: A CCF-A conference paper on fault-guided fine-tuning for code generation.
 
@@ -87,7 +84,7 @@ cv:
           - Mouxiang Chen
           - Zhongxin Liu
         publisher: Findings of ACL 2025
-        releaseDate: 2025
+        releaseDate: "2025"
         url: https://aclanthology.org/2025.findings-acl.324/
         summary: A CCF-A paper on keyword-enhanced code generation with LLMs.
 
@@ -98,19 +95,21 @@ cv:
           - Mouxiang Chen
           - Zhongxin Liu
         publisher: arXiv
-        releaseDate: 2025
+        releaseDate: "2025"
         url: https://arxiv.org/abs/2508.05170
         summary: A process-reward reinforcement learning approach for code generation.
 
     Awards:
       - title: Outstanding Graduate Student
+        authors:
+          - Zhejiang University
         awarder: Zhejiang University
-        date:
         summary: Awarded for academic and research excellence.
 
       - title: Five-Good Graduate Student
+        authors:
+          - Zhejiang University
         awarder: Zhejiang University
-        date:
         summary: Awarded by Zhejiang University.
 
     Projects:
