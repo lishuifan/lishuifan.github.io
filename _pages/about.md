@@ -9,8 +9,8 @@ profile:
   image: lishui_fan_profile.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>College of Computer Science and Technology<br>Zhejiang University</p>
-    <p>Advisors: <a href="https://zhongxin-liu.github.io/" rel="external nofollow noopener" target="_blank">Zhongxin Liu</a> and Shanping Li</p>
+    <p>Zhejiang University<br>Computer Science Ph.D.</p>
+    <p>Advised by <a href="https://zhongxin-liu.github.io/" rel="external nofollow noopener" target="_blank">Zhongxin Liu</a> and Shanping Li</p>
     <p><a href="mailto:flscode@zju.edu.cn">flscode@zju.edu.cn</a></p>
     <p>Hangzhou, China</p>
 
@@ -29,12 +29,153 @@ latest_posts:
 ---
 
 <style>
+.post-header {
+  margin-bottom: 1.15rem;
+}
+
+.post-title {
+  margin-bottom: 0.35rem;
+}
+
+.post .desc {
+  color: var(--global-text-color-light);
+  line-height: 1.4;
+}
+
+.post > article > .profile {
+  margin-bottom: 1rem;
+}
+
+.post > article > .profile figure {
+  margin-bottom: 0.45rem;
+}
+
+.post > article > .profile img {
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+.post > article > .profile .more-info {
+  color: var(--global-text-color-light);
+  font-family: inherit;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  margin-top: 0;
+}
+
+.post > article > .profile .more-info p {
+  display: block;
+  margin: 0 0 0.38rem;
+}
+
+.post > article > .clearfix p:first-child {
+  line-height: 1.62;
+  margin-bottom: 0.65rem;
+  max-width: 700px;
+}
+
+.research-focus {
+  color: var(--global-text-color-light);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.86rem;
+  gap: 0.25rem 0.9rem;
+  margin: 0 0 1.25rem;
+  max-width: 700px;
+}
+
+.research-focus span::before {
+  color: var(--global-theme-color);
+  content: "#";
+  margin-right: 0.12rem;
+}
+
+.post > article h2 {
+  font-size: 1.65rem;
+  margin-bottom: 0.8rem;
+  margin-top: 2rem;
+}
+
+.post > article .news .table-sm td,
+.post > article .news .table-sm th {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.post > article .publications ol.bibliography li {
+  margin-bottom: 1.25rem;
+}
+
+.post > article > .social {
+  margin-top: 2rem;
+}
+
+.post > article > .social .contact-icons {
+  font-size: 2.35rem;
+}
+
+.post > article > .social .contact-icons a {
+  margin: 0 0.3rem;
+}
+
+.post > article > .social .contact-note {
+  color: var(--global-text-color-light);
+  line-height: 1.45;
+  margin: 0.15rem auto 0;
+  max-width: 560px;
+}
+
 @media (min-width: 576px) {
   .post > article > .profile {
-    width: 200px;
-    max-width: 26%;
+    max-width: 18%;
+    width: 150px;
+  }
+
+  .post > article > .profile.float-right {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .post > article > .profile {
+    float: none !important;
+    margin: 0 auto 1.15rem;
+    max-width: 58vw;
+    width: 190px;
+  }
+
+  .post > article > .profile .more-info {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .post > article > .clearfix p:first-child {
+    line-height: 1.58;
+    margin-bottom: 0.7rem;
+    max-width: none;
+  }
+
+  .research-focus {
+    font-size: 0.8rem;
+    margin-bottom: 1.05rem;
+  }
+
+  .post > article h2 {
+    font-size: 1.5rem;
+    margin-top: 1.65rem;
+  }
+
+  .post > article > .social .contact-icons {
+    font-size: 2.2rem;
   }
 }
 </style>
 
 I am a third-year Ph.D. student at the College of Computer Science and Technology, Zhejiang University, advised by [Zhongxin Liu](https://zhongxin-liu.github.io/) and Shanping Li. My research focuses on **large language models for code generation**, with broader interests in large language models, code-change understanding, and coding agents. I was fortunate to intern at Alibaba Future Life Lab and ByteDance Douyin AI4SE. Over the past two years, I have published or had accepted four first-author CCF-A papers in software engineering and related areas, including work in **ACM TOSEM**, **ASE**, and **ACL**.
+
+<div class="research-focus">
+  <span>Code generation</span>
+  <span>Code-change understanding</span>
+  <span>Coding agents</span>
+  <span>LLM post-training</span>
+</div>
