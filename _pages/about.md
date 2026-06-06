@@ -28,4 +28,13 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
+<style>
+@media (min-width: 576px) {
+  .post > article > .profile {
+    width: 200px;
+    max-width: 26%;
+  }
+}
+</style>
+
 I am a third-year Ph.D. student at the College of Computer Science and Technology, Zhejiang University, advised by [Zhongxin Liu](https://zhongxin-liu.github.io/) and Shanping Li. My research focuses on **large language models for code generation**, with broader interests in large language models, code-change understanding, and coding agents. I was fortunate to intern at Alibaba Future Life Lab and ByteDance Douyin AI4SE. Over the past two years, I have published or had accepted four first-author CCF-A papers in software engineering and related areas, including work in **ACM TOSEM**, **ASE**, and **ACL**.
