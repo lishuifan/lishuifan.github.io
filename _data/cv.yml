@@ -38,7 +38,7 @@ cv:
 
     Research:
       - name: LLM-based Code Generation
-        summary: Studies training, evaluation, and optimization methods for code LLMs, including fault-guided fine-tuning, keyword-enhanced prompting, and process-reward reinforcement learning.
+        summary: Studies training, evaluation, and optimization methods for code LLMs, including fault-guided fine-tuning, keyword-enhanced prompting, and reasoning-process reward learning.
         highlights:
           - Code LLM capability evaluation.
           - Code-change understanding.
@@ -52,6 +52,44 @@ cv:
           - Huawei million-level industry collaboration project.
 
     Publications:
+      - title: "ReCode: Reinforcing Code Generation with Reasoning-Process Rewards"
+        authors:
+          - Lishui Fan
+          - Yu Zhang
+          - Mouxiang Chen
+          - Zhongxin Liu
+        publisher: ACL 2026 Main Conference
+        releaseDate: "2026"
+        url: https://arxiv.org/abs/2508.05170
+        summary: A CCF-A paper on reasoning-process reward learning for code generation.
+
+      - title: "ZeroCoder: Can LLMs Improve Code Generation Without Ground-Truth Supervision?"
+        authors:
+          - Lishui Fan
+          - Mouxiang Chen
+          - Tingwei Zhu
+          - Kui Liu
+          - Xin Xia
+          - Shanping Li
+          - Zhongxin Liu
+        publisher: arXiv
+        releaseDate: "2026"
+        url: https://arxiv.org/abs/2604.07864
+        summary: A preprint on label-free co-evolution of code and test generation.
+
+      - title: Balancing Latency and Accuracy of Code Completion via Local-Cloud Model Cascading
+        authors:
+          - Hanzhen Lu
+          - Lishui Fan
+          - Jiachi Chen
+          - Qiuyuan Chen
+          - Zhao Wei
+          - Zhongxin Liu
+        publisher: FSE 2026
+        releaseDate: "2026"
+        url: https://arxiv.org/abs/2603.05974
+        summary: A collaborative Tencent-related paper on local-cloud model cascading for code completion.
+
       - title: Exploring the Capabilities of LLMs for Code-Change-Related Tasks
         authors:
           - Lishui Fan
@@ -87,17 +125,6 @@ cv:
         releaseDate: "2025"
         url: https://aclanthology.org/2025.findings-acl.324/
         summary: A CCF-A paper on keyword-enhanced code generation with LLMs.
-
-      - title: "Posterior-GRPO: Rewarding Reasoning Processes in Code Generation"
-        authors:
-          - Lishui Fan
-          - Yu Zhang
-          - Mouxiang Chen
-          - Zhongxin Liu
-        publisher: arXiv
-        releaseDate: "2025"
-        url: https://arxiv.org/abs/2508.05170
-        summary: A process-reward reinforcement learning approach for code generation.
 
     Awards:
       - title: Outstanding Graduate Student

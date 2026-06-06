@@ -30,7 +30,7 @@ latest_posts:
 
 I am a third-year Ph.D. student in Computer Science at the College of Computer Science and Technology, Zhejiang University. My research focuses on **large language models for code generation**, with a broader interest in software engineering intelligence, code-change understanding, and coding agents.
 
-Over the past two years, I have published or had accepted four first-author CCF-A papers in software engineering and related areas. My work has appeared in venues including **ACM TOSEM**, **ASE**, and **ACL**, covering code LLM capability evaluation, fault-guided fine-tuning, keyword-enhanced code generation, and process-reward reinforcement learning. These works form a continuous research line around understanding code changes and improving code generation.
+Over the past two years, I have published or had accepted four first-author CCF-A papers in software engineering and related areas. My work has appeared in venues including **ACM TOSEM**, **ASE**, and **ACL**, covering code LLM capability evaluation, fault-guided fine-tuning, keyword-enhanced code generation, and reasoning-process reward learning. These works form a continuous research line around understanding code changes and improving code generation.
 
 My research has been cited by seven domestic and international academicians and IEEE/ACM Fellows, and one of my first-author papers has received more than 60 citations on Google Scholar. I have received honors including Outstanding Graduate Student and Five-Good Graduate Student at Zhejiang University.
 
@@ -42,20 +42,21 @@ Before my current research, I interned at Alibaba Future Life Lab and ByteDance 
 
 - LLM-based code generation and coding agents
 - Code-change understanding and repository-aware software engineering
-- Fault-guided fine-tuning and reinforcement learning for code
+- Fault-guided fine-tuning and reasoning-process reward learning for code
 - Evaluation of code LLMs in realistic development workflows
 
 ## Highlights
 
 - Four first-author CCF-A publications/acceptances in the past two years
-- Publications in ACM TOSEM, ASE, ACL, and related top venues
+- Publications and preprints in ACM TOSEM, ASE, ACL, FSE, and arXiv
 - Research cited by academicians and IEEE/ACM Fellows
 - Core contributor to CCF-Huawei, Tencent Rhino-Bird, and Huawei industry projects
 
-## Selected Work
+## Publications
 
+- **ReCode: Reinforcing Code Generation with Reasoning-Process Rewards**, ACL 2026 Main Conference.
+- **ZeroCoder: Can LLMs Improve Code Generation Without Ground-Truth Supervision?**, arXiv 2026.
+- **Balancing Latency and Accuracy of Code Completion via Local-Cloud Model Cascading**, FSE 2026, collaborative work with Tencent.
 - **Exploring the Capabilities of LLMs for Code-Change-Related Tasks**, ACM TOSEM 2025.
 - **FGit: Fault-Guided Fine-Tuning for Code Generation**, ASE 2025.
 - **SEK: Self-Explained Keywords Empower Large Language Models for Code Generation**, Findings of ACL 2025.
-- **Posterior-GRPO: Rewarding Reasoning Processes in Code Generation**, 2025.
-- **Balancing Latency and Accuracy of Code Completion via Local-Cloud Model Cascading**, FSE 2026, collaborative work with Tencent.

@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Selected publications and preprints on LLM-based code generation and software engineering.
+description: Publications and preprints on LLM-based code generation and software engineering.
 nav: true
 nav_order: 2
 ---
