@@ -7,3 +7,18 @@
 
 "Vision":
   color: "#009f36"
+
+"ACL CCF-A":
+  color: "#6f5aa7"
+
+"FSE CCF-A":
+  color: "#2f7d6d"
+
+"TOSEM CCF-A":
+  color: "#5d6675"
+
+"ASE CCF-A":
+  color: "#8a6f2f"
+
+"arXiv":
+  color: "#b31b1b"

@@ -126,19 +126,6 @@ cv:
         url: https://aclanthology.org/2025.findings-acl.324/
         summary: A CCF-A paper on keyword-enhanced code generation with LLMs.
 
-    Awards:
-      - title: Outstanding Graduate Student
-        authors:
-          - Zhejiang University
-        awarder: Zhejiang University
-        summary: Awarded for academic and research excellence.
-
-      - title: Five-Good Graduate Student
-        authors:
-          - Zhejiang University
-        awarder: Zhejiang University
-        summary: Awarded by Zhejiang University.
-
     Projects:
       - name: CCF-Huawei Populus Grove Fund Project
         summary: Core research contributor to an industry-academic project on software engineering intelligence.
