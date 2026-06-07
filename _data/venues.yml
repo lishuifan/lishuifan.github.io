@@ -8,16 +8,16 @@
 "Vision":
   color: "#009f36"
 
-"ACL CCF-A":
+"ACL":
   color: "#6f5aa7"
 
-"FSE CCF-A":
+"FSE":
   color: "#2f7d6d"
 
-"TOSEM CCF-A":
+"TOSEM":
   color: "#5d6675"
 
-"ASE CCF-A":
+"ASE":
   color: "#8a6f2f"
 
 "arXiv":
