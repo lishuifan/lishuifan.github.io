@@ -13,7 +13,7 @@ profile:
     <p>Hangzhou, China</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
@@ -136,25 +136,6 @@ latest_posts:
   vertical-align: middle;
 }
 
-.post > article > .social {
-  margin-top: 2rem;
-}
-
-.post > article > .social .contact-icons {
-  font-size: 2.35rem;
-}
-
-.post > article > .social .contact-icons a {
-  margin: 0 0.3rem;
-}
-
-.post > article > .social .contact-note {
-  color: var(--global-text-color-light);
-  line-height: 1.45;
-  margin: 0.15rem auto 0;
-  max-width: 560px;
-}
-
 @media (min-width: 576px) {
   .post > article > .profile {
     max-width: 18%;
@@ -216,9 +197,6 @@ latest_posts:
     width: auto !important;
   }
 
-  .post > article > .social .contact-icons {
-    font-size: 2.2rem;
-  }
 }
 </style>
 
