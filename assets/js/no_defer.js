@@ -1,11 +1,38 @@
+const directToggleThemeSetting = () => {
+  const nextTheme = determineComputedTheme() === "dark" ? "light" : "dark";
+  setThemeSetting(nextTheme);
+};
+
+const bindDirectThemeToggle = () => {
+  const modeToggle = document.getElementById("light-toggle");
+
+  if (!modeToggle || modeToggle.dataset.directThemeToggle === "true") {
+    return;
+  }
+
+  modeToggle.dataset.directThemeToggle = "true";
+  modeToggle.addEventListener(
+    "click",
+    (event) => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+      directToggleThemeSetting();
+    },
+    { capture: true }
+  );
+};
+
 if (typeof determineComputedTheme === "function" && typeof setThemeSetting === "function") {
-  toggleThemeSetting = () => {
-    const nextTheme = determineComputedTheme() === "dark" ? "light" : "dark";
-    setThemeSetting(nextTheme);
-  };
+  toggleThemeSetting = directToggleThemeSetting;
+  bindDirectThemeToggle();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  if (typeof determineComputedTheme === "function" && typeof setThemeSetting === "function") {
+    bindDirectThemeToggle();
+  }
+
   const compatBootstrap = Boolean(window.alFolio && window.alFolio.compatBootstrap);
   const computedTheme =
     typeof window.determineComputedTheme === "function" ? window.determineComputedTheme() : document.documentElement.dataset.theme || "light";

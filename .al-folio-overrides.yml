@@ -6,5 +6,5 @@ overrides:
     gem_version: 1.0.11
     upstream_path: assets/js/no_defer.js
     upstream_sha256: 30c1e442becaefce36dba46082f93dc21c8334f102301cb8f1d08ceb7e0aad51
-    local_sha256: 1214985a1e8c5bfd5ec25cb68e97cf0b057c12dc87cea69d290a6cfad6e6fbbe
-    acknowledged_at: "2026-06-06"
+    local_sha256: 32140279aaf4e0c92ec4eb340969804caec32f482300741c72451ee08dc4e0ed
+    acknowledged_at: '2026-06-08'
