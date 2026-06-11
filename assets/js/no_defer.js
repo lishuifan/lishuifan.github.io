@@ -76,7 +76,7 @@ const renderSiteStatsTrend = () => {
     chartElement.classList.add("is-empty");
     trendElement?.classList.add("is-loading");
     valueElement.textContent = "waiting for first sample";
-    noteElement.textContent = "The trend chart is built from public aggregate counters and updates once per day.";
+    noteElement.textContent = "Built from public aggregate counters and updated once per day.";
     dateElement.textContent = "No historical sample has been collected yet.";
     return;
   }
@@ -115,10 +115,10 @@ const renderSiteStatsTrend = () => {
   const latest = samples[samples.length - 1];
   const previous = samples[samples.length - 2];
   const delta = previous ? latest.sitePv - previous.sitePv : 0;
-  const deltaText = previous ? `${delta >= 0 ? "+" : ""}${formatSiteStatNumber(delta)} site views since previous sample.` : "First sample recorded.";
+  const deltaText = previous ? `${delta >= 0 ? "+" : ""}${formatSiteStatNumber(delta)} views since previous sample.` : "First daily sample recorded.";
 
-  valueElement.textContent = `${formatSiteStatNumber(latest.sitePv)} total site views`;
-  noteElement.textContent = `${deltaText} Public aggregate counters only; no personal visitor data is stored here.`;
+  valueElement.textContent = `${formatSiteStatNumber(latest.sitePv)} views`;
+  noteElement.textContent = `${deltaText} Aggregate only.`;
   dateElement.textContent = `Latest sample: ${latest.date}.`;
 };
 

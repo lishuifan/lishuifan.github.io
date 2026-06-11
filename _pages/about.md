@@ -140,55 +140,61 @@ latest_posts:
 
 .site-stats {
   border-top: 1px solid var(--global-divider-color);
-  margin-top: 2.3rem;
-  padding-top: 1.3rem;
+  display: grid;
+  gap: 0.4rem 0.75rem;
+  grid-template-columns: minmax(13rem, 0.34fr) 1fr;
+  margin-top: 1.25rem;
+  padding-top: 0.65rem;
 }
 
 .site-stats__header {
   align-items: baseline;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.55rem;
+  grid-column: 1 / -1;
   justify-content: space-between;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.05rem;
 }
 
-.site-stats__header h2 {
-  font-size: 1.3rem;
+.post > article .site-stats__header h2 {
+  font-size: 0.92rem;
+  line-height: 1.2;
   margin: 0;
 }
 
 .site-stats__header p,
 .site-stats__trend p {
   color: var(--global-text-color-light);
-  font-size: 0.78rem;
-  line-height: 1.45;
+  font-size: 0.68rem;
+  line-height: 1.35;
   margin: 0;
 }
 
 .site-stats__header p {
-  max-width: 26rem;
+  max-width: 22rem;
   text-align: right;
 }
 
 .site-stats__grid {
   display: grid;
-  gap: 0.75rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-bottom: 0.9rem;
+  gap: 0.45rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 0;
+  max-width: none;
 }
 
 .site-stats__metric {
   border: 1px solid var(--global-divider-color);
   border-radius: 6px;
   min-width: 0;
-  padding: 0.7rem 0.8rem;
+  padding: 0.34rem 0.5rem;
 }
 
 .site-stats__value {
   color: var(--global-text-color);
   display: block;
-  font-size: 1.18rem;
+  font-size: 0.82rem;
   font-weight: 650;
   line-height: 1.15;
 }
@@ -196,9 +202,9 @@ latest_posts:
 .site-stats__label {
   color: var(--global-text-color-light);
   display: block;
-  font-size: 0.72rem;
+  font-size: 0.6rem;
   line-height: 1.2;
-  margin-top: 0.22rem;
+  margin-top: 0.12rem;
   text-transform: lowercase;
 }
 
@@ -207,20 +213,20 @@ latest_posts:
   border: 1px dashed var(--global-divider-color);
   border-radius: 6px;
   display: grid;
-  gap: 0.85rem;
-  grid-template-columns: minmax(150px, 0.48fr) 1fr;
-  padding: 0.75rem 0.85rem;
+  gap: 0.55rem;
+  grid-template-columns: minmax(88px, 0.25fr) 1fr;
+  padding: 0.34rem 0.5rem;
 }
 
 .site-stats__trend-chart {
   align-items: center;
   display: flex;
-  min-height: 5.25rem;
+  min-height: 2.45rem;
 }
 
 .site-stats__trend-chart svg {
   display: block;
-  height: 4.6rem;
+  height: 2.2rem;
   overflow: visible;
   width: 100%;
 }
@@ -240,7 +246,7 @@ latest_posts:
   stroke: var(--global-theme-color);
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 3.5;
+  stroke-width: 3;
 }
 
 .site-stats__trend-chart .trend-dot {
@@ -257,28 +263,28 @@ latest_posts:
 .site-stats__trend-kicker {
   color: var(--global-text-color-light);
   display: block;
-  font-size: 0.68rem;
+  font-size: 0.58rem;
   letter-spacing: 0;
   line-height: 1.1;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.12rem;
   text-transform: uppercase;
 }
 
 .site-stats__trend-value {
   color: var(--global-text-color);
   display: block;
-  font-size: 0.98rem;
+  font-size: 0.78rem;
   font-weight: 650;
   line-height: 1.25;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.1rem;
 }
 
 .site-stats__trend-date {
   color: var(--global-text-color-light);
   display: block;
-  font-size: 0.72rem;
+  font-size: 0.6rem;
   line-height: 1.25;
-  margin-top: 0.35rem;
+  margin-top: 0.12rem;
 }
 
 .site-stats__trend a {
@@ -291,7 +297,7 @@ latest_posts:
   border: 1px solid var(--global-divider-color);
   border-radius: 6px;
   justify-content: center;
-  min-height: 4.6rem;
+  min-height: 2.2rem;
 }
 
 .site-stats__trend-chart.is-empty svg {
@@ -361,6 +367,12 @@ latest_posts:
     display: block;
   }
 
+  .site-stats {
+    display: block;
+    margin-top: 1.35rem;
+    padding-top: 0.75rem;
+  }
+
   .site-stats__header p {
     margin-top: 0.35rem;
     max-width: none;
@@ -369,6 +381,7 @@ latest_posts:
 
   .site-stats__grid {
     grid-template-columns: 1fr;
+    margin-bottom: 0.45rem;
   }
 
   .site-stats__trend {
@@ -400,22 +413,18 @@ I am a **third-year Ph.D. student** at the College of Computer Science and Techn
 
 <section class="site-stats" id="site-stats" aria-labelledby="site-stats-heading">
   <div class="site-stats__header">
-    <h2 id="site-stats-heading">site statistics</h2>
-    <p>Public counters are aggregate-only; detailed analytics stay private.</p>
+    <h2 id="site-stats-heading">traffic</h2>
+    <p>Aggregate public counters, sampled daily.</p>
   </div>
 
   <div class="site-stats__grid">
     <div class="site-stats__metric" id="busuanzi_container_site_pv">
       <span class="site-stats__value" id="busuanzi_value_site_pv">--</span>
-      <span class="site-stats__label">site views</span>
+      <span class="site-stats__label">views</span>
     </div>
     <div class="site-stats__metric" id="busuanzi_container_site_uv">
       <span class="site-stats__value" id="busuanzi_value_site_uv">--</span>
       <span class="site-stats__label">visitors</span>
-    </div>
-    <div class="site-stats__metric" id="busuanzi_container_page_pv">
-      <span class="site-stats__value" id="busuanzi_value_page_pv">--</span>
-      <span class="site-stats__label">homepage views</span>
     </div>
   </div>
 
@@ -433,7 +442,7 @@ I am a **third-year Ph.D. student** at the College of Computer Science and Techn
       <span class="site-stats__trend-kicker">daily trend</span>
       <strong class="site-stats__trend-value" id="site-stats-trend-value">waiting for first sample</strong>
       <p id="site-stats-trend-note">
-        The trend chart is built from public aggregate counters and updates once per day.
+        Built from public aggregate counters and updated once per day.
       </p>
       <span class="site-stats__trend-date" id="site-stats-trend-date">No historical sample has been collected yet.</span>
     </div>

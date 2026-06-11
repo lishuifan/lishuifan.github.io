@@ -65,7 +65,7 @@ try {
   await page.goto(url.toString(), { timeout: 60000, waitUntil: "commit" });
   await page.waitForFunction(
     () => {
-      const ids = ["busuanzi_value_site_pv", "busuanzi_value_site_uv", "busuanzi_value_page_pv"];
+      const ids = ["busuanzi_value_site_pv", "busuanzi_value_site_uv"];
       return ids.every((id) => {
         const value = document.getElementById(id)?.textContent?.trim();
         return value && value !== "--";
@@ -83,7 +83,7 @@ try {
 
   const sample = {
     date: shanghaiDate(),
-    page_pv: parseCounter(counters.page_pv),
+    page_pv: counters.page_pv ? parseCounter(counters.page_pv) : parseCounter(counters.site_pv),
     site_pv: parseCounter(counters.site_pv),
     site_uv: parseCounter(counters.site_uv),
   };
