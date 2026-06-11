@@ -203,40 +203,107 @@ latest_posts:
 }
 
 .site-stats__trend {
-  align-items: center;
+  align-items: stretch;
   border: 1px dashed var(--global-divider-color);
   border-radius: 6px;
   display: grid;
   gap: 0.85rem;
-  grid-template-columns: minmax(120px, 0.42fr) 1fr;
+  grid-template-columns: minmax(150px, 0.48fr) 1fr;
   padding: 0.75rem 0.85rem;
 }
 
-.site-stats__trend iframe {
-  border: 0;
-  border-radius: 6px;
-  height: 260px;
-  width: 100%;
+.site-stats__trend-chart {
+  align-items: center;
+  display: flex;
+  min-height: 5.25rem;
 }
 
-.site-stats__trend-preview svg {
+.site-stats__trend-chart svg {
   display: block;
-  height: 3.6rem;
+  height: 4.6rem;
+  overflow: visible;
   width: 100%;
 }
 
-.site-stats__trend-preview polyline {
+.site-stats__trend-chart .trend-grid {
+  stroke: var(--global-divider-color);
+  stroke-width: 1;
+}
+
+.site-stats__trend-chart .trend-area {
+  fill: var(--global-theme-color);
+  opacity: 0.1;
+}
+
+.site-stats__trend-chart .trend-line {
   fill: none;
   stroke: var(--global-theme-color);
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 4;
+  stroke-width: 3.5;
+}
+
+.site-stats__trend-chart .trend-dot {
+  fill: var(--global-theme-color);
+  stroke: var(--global-bg-color);
+  stroke-width: 2;
+}
+
+.site-stats__trend-summary {
+  align-self: center;
+  min-width: 0;
+}
+
+.site-stats__trend-kicker {
+  color: var(--global-text-color-light);
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.site-stats__trend-value {
+  color: var(--global-text-color);
+  display: block;
+  font-size: 0.98rem;
+  font-weight: 650;
+  line-height: 1.25;
+  margin-bottom: 0.25rem;
+}
+
+.site-stats__trend-date {
+  color: var(--global-text-color-light);
+  display: block;
+  font-size: 0.72rem;
+  line-height: 1.25;
+  margin-top: 0.35rem;
 }
 
 .site-stats__trend a {
   color: var(--global-theme-color);
   font-size: 0.84rem;
   font-weight: 650;
+}
+
+.site-stats__trend-chart.is-empty {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  justify-content: center;
+  min-height: 4.6rem;
+}
+
+.site-stats__trend-chart.is-empty svg {
+  opacity: 0.55;
+}
+
+.site-stats__trend.is-loading .trend-line {
+  stroke-dasharray: 5 7;
+}
+
+.site-stats__trend p {
+  max-width: 32rem;
 }
 
 @media (min-width: 576px) {
@@ -353,38 +420,28 @@ I am a **third-year Ph.D. student** at the College of Computer Science and Techn
   </div>
 
   <div class="site-stats__trend">
-    {% if site.site_stats.goatcounter.dashboard_url %}
-      {% if site.site_stats.goatcounter.embed %}
-        <iframe
-          title="Traffic trend dashboard"
-          src="{{ site.site_stats.goatcounter.dashboard_url }}"
-          loading="lazy"
-          referrerpolicy="no-referrer"
-        ></iframe>
-      {% else %}
-        <a href="{{ site.site_stats.goatcounter.dashboard_url }}" target="_blank" rel="external nofollow noopener"
-          >Traffic trend dashboard</a
-        >
-      {% endif %}
-    {% else %}
-      <div class="site-stats__trend-preview" aria-hidden="true">
-        <svg viewBox="0 0 320 72" role="img">
-          <polyline points="4,58 48,49 92,53 136,38 180,42 224,27 268,31 316,18"></polyline>
-        </svg>
-      </div>
-      <p>Trend dashboard is prepared for GoatCounter, but disabled until a private account is connected.</p>
-    {% endif %}
+    <div class="site-stats__trend-chart is-empty" aria-hidden="true">
+      <svg id="site-stats-trend-chart" viewBox="0 0 320 88" role="img">
+        <line class="trend-grid" x1="4" x2="316" y1="74" y2="74"></line>
+        <line class="trend-grid" x1="4" x2="316" y1="44" y2="44"></line>
+        <path class="trend-area" id="site-stats-trend-area"></path>
+        <polyline class="trend-line" id="site-stats-trend-line" points="4,66 48,58 92,62 136,43 180,47 224,31 268,35 316,21"></polyline>
+        <circle class="trend-dot" id="site-stats-trend-dot" cx="316" cy="21" r="4"></circle>
+      </svg>
+    </div>
+    <div class="site-stats__trend-summary">
+      <span class="site-stats__trend-kicker">daily trend</span>
+      <strong class="site-stats__trend-value" id="site-stats-trend-value">waiting for first sample</strong>
+      <p id="site-stats-trend-note">
+        The trend chart is built from public aggregate counters and updates once per day.
+      </p>
+      <span class="site-stats__trend-date" id="site-stats-trend-date">No historical sample has been collected yet.</span>
+    </div>
   </div>
 </section>
 
+<script type="application/json" id="site-stats-history">
+  {{ site.data.site_stats_history | jsonify }}
+</script>
+
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-{% if site.site_stats.goatcounter.code %}
-
-  <script
-    data-goatcounter="https://{{ site.site_stats.goatcounter.code }}.goatcounter.com/count"
-    async
-    src="https://gc.zgo.at/count.js"
-  ></script>
-
-{% endif %}

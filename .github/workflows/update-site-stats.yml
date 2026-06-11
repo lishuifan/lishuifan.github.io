@@ -1,0 +1,87 @@
+name: Update Site Statistics
+
+on:
+  schedule:
+    - cron: "17 18 * * *" # 02:17 Asia/Shanghai
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-site-statistics
+  cancel-in-progress: false
+
+jobs:
+  update-site-statistics:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install JS dependencies
+        run: npm ci
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Collect public site statistics
+        env:
+          SITE_STATS_URL: https://lishuifan.github.io/
+        run: node bin/collect_site_stats.mjs
+
+      - name: Commit and push if changed
+        id: commit
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add _data/site_stats_history.json
+          if git diff --staged --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No site statistics changes to commit."
+          else
+            git commit -m "Update site statistics history"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Setup Ruby
+        if: steps.commit.outputs.changed == 'true'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+
+      - name: Setup Python
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip"
+
+      - name: Build site with updated statistics
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          sudo apt-get update && sudo apt-get install -y imagemagick
+          pip3 install --upgrade nbconvert
+          export JEKYLL_ENV=production
+          bundle exec jekyll build
+
+      - name: Purge unused CSS
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          npm install -g purgecss
+          purgecss -c purgecss.config.js
+
+      - name: Deploy updated statistics
+        if: steps.commit.outputs.changed == 'true'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
