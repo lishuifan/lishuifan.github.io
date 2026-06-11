@@ -28,10 +28,23 @@ if (typeof determineComputedTheme === "function" && typeof setThemeSetting === "
   bindDirectThemeToggle();
 }
 
+const moveSiteStats = () => {
+  const siteStats = document.getElementById("site-stats");
+  const publications = document.querySelector(".post > article .publications");
+
+  if (siteStats && publications && publications.nextElementSibling !== siteStats) {
+    publications.insertAdjacentElement("afterend", siteStats);
+  }
+};
+
+moveSiteStats();
+
 document.addEventListener("DOMContentLoaded", () => {
   if (typeof determineComputedTheme === "function" && typeof setThemeSetting === "function") {
     bindDirectThemeToggle();
   }
+
+  moveSiteStats();
 
   const compatBootstrap = Boolean(window.alFolio && window.alFolio.compatBootstrap);
   const computedTheme =

@@ -14,6 +14,8 @@ profile:
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
+site_stats:
+  enabled: true
 
 announcements:
   enabled: true # includes a list of news items
@@ -136,6 +138,107 @@ latest_posts:
   vertical-align: middle;
 }
 
+.site-stats {
+  border-top: 1px solid var(--global-divider-color);
+  margin-top: 2.3rem;
+  padding-top: 1.3rem;
+}
+
+.site-stats__header {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.site-stats__header h2 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.site-stats__header p,
+.site-stats__trend p {
+  color: var(--global-text-color-light);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.site-stats__header p {
+  max-width: 26rem;
+  text-align: right;
+}
+
+.site-stats__grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 0.9rem;
+}
+
+.site-stats__metric {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  min-width: 0;
+  padding: 0.7rem 0.8rem;
+}
+
+.site-stats__value {
+  color: var(--global-text-color);
+  display: block;
+  font-size: 1.18rem;
+  font-weight: 650;
+  line-height: 1.15;
+}
+
+.site-stats__label {
+  color: var(--global-text-color-light);
+  display: block;
+  font-size: 0.72rem;
+  line-height: 1.2;
+  margin-top: 0.22rem;
+  text-transform: lowercase;
+}
+
+.site-stats__trend {
+  align-items: center;
+  border: 1px dashed var(--global-divider-color);
+  border-radius: 6px;
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: minmax(120px, 0.42fr) 1fr;
+  padding: 0.75rem 0.85rem;
+}
+
+.site-stats__trend iframe {
+  border: 0;
+  border-radius: 6px;
+  height: 260px;
+  width: 100%;
+}
+
+.site-stats__trend-preview svg {
+  display: block;
+  height: 3.6rem;
+  width: 100%;
+}
+
+.site-stats__trend-preview polyline {
+  fill: none;
+  stroke: var(--global-theme-color);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4;
+}
+
+.site-stats__trend a {
+  color: var(--global-theme-color);
+  font-size: 0.84rem;
+  font-weight: 650;
+}
+
 @media (min-width: 576px) {
   .post > article > .profile {
     max-width: 18%;
@@ -186,6 +289,25 @@ latest_posts:
     margin-top: 1.65rem;
   }
 
+  .site-stats__header {
+    align-items: flex-start;
+    display: block;
+  }
+
+  .site-stats__header p {
+    margin-top: 0.35rem;
+    max-width: none;
+    text-align: left;
+  }
+
+  .site-stats__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-stats__trend {
+    grid-template-columns: 1fr;
+  }
+
   .post > article .publications ol.bibliography li .abbr {
     flex: 0 0 auto;
     max-width: none;
@@ -208,3 +330,61 @@ I am a **third-year Ph.D. student** at the College of Computer Science and Techn
   <span>Coding agents</span>
   <span>LLM post-training</span>
 </div>
+
+<section class="site-stats" id="site-stats" aria-labelledby="site-stats-heading">
+  <div class="site-stats__header">
+    <h2 id="site-stats-heading">site statistics</h2>
+    <p>Public counters are aggregate-only; detailed analytics stay private.</p>
+  </div>
+
+  <div class="site-stats__grid">
+    <div class="site-stats__metric" id="busuanzi_container_site_pv">
+      <span class="site-stats__value" id="busuanzi_value_site_pv">--</span>
+      <span class="site-stats__label">site views</span>
+    </div>
+    <div class="site-stats__metric" id="busuanzi_container_site_uv">
+      <span class="site-stats__value" id="busuanzi_value_site_uv">--</span>
+      <span class="site-stats__label">visitors</span>
+    </div>
+    <div class="site-stats__metric" id="busuanzi_container_page_pv">
+      <span class="site-stats__value" id="busuanzi_value_page_pv">--</span>
+      <span class="site-stats__label">homepage views</span>
+    </div>
+  </div>
+
+  <div class="site-stats__trend">
+    {% if site.site_stats.goatcounter.dashboard_url %}
+      {% if site.site_stats.goatcounter.embed %}
+        <iframe
+          title="Traffic trend dashboard"
+          src="{{ site.site_stats.goatcounter.dashboard_url }}"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        ></iframe>
+      {% else %}
+        <a href="{{ site.site_stats.goatcounter.dashboard_url }}" target="_blank" rel="external nofollow noopener"
+          >Traffic trend dashboard</a
+        >
+      {% endif %}
+    {% else %}
+      <div class="site-stats__trend-preview" aria-hidden="true">
+        <svg viewBox="0 0 320 72" role="img">
+          <polyline points="4,58 48,49 92,53 136,38 180,42 224,27 268,31 316,18"></polyline>
+        </svg>
+      </div>
+      <p>Trend dashboard is prepared for GoatCounter, but disabled until a private account is connected.</p>
+    {% endif %}
+  </div>
+</section>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+{% if site.site_stats.goatcounter.code %}
+
+  <script
+    data-goatcounter="https://{{ site.site_stats.goatcounter.code }}.goatcounter.com/count"
+    async
+    src="https://gc.zgo.at/count.js"
+  ></script>
+
+{% endif %}
