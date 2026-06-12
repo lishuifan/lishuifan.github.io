@@ -29,7 +29,7 @@ cv:
         end_date:
         summary: Worked on AI for software engineering and code intelligence problems in practical development settings.
 
-      - company: Alibaba Future Life Lab
+      - company: Taotian Future Life Lab
         position: Research Intern
         location: China
         start_date:
@@ -136,7 +136,7 @@ cv:
       - name: Tencent Rhino-Bird Special Project
         summary: Core contributor to Tencent-collaborated research on code intelligence and code completion.
         highlights:
-          - Related collaborative work accepted by FSE 2026.
+          - Related collaborative work accepted to FSE 2026.
           - Focus on latency-accuracy trade-offs for code completion.
 
       - name: Huawei Industry Collaboration Project

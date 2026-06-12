@@ -14,9 +14,6 @@ profile:
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
-site_stats:
-  enabled: true
-
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
@@ -138,180 +135,6 @@ latest_posts:
   vertical-align: middle;
 }
 
-.site-stats {
-  border-top: 1px solid var(--global-divider-color);
-  display: grid;
-  gap: 0.4rem 0.75rem;
-  grid-template-columns: minmax(13rem, 0.34fr) 1fr;
-  margin-top: 1.25rem;
-  padding-top: 0.65rem;
-}
-
-.site-stats__header {
-  align-items: baseline;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  grid-column: 1 / -1;
-  justify-content: space-between;
-  margin-bottom: 0.05rem;
-}
-
-.post > article .site-stats__header h2 {
-  font-size: 0.92rem;
-  line-height: 1.2;
-  margin: 0;
-}
-
-.site-stats__header p,
-.site-stats__trend p {
-  color: var(--global-text-color-light);
-  font-size: 0.68rem;
-  line-height: 1.35;
-  margin: 0;
-}
-
-.site-stats__header p {
-  max-width: 22rem;
-  text-align: right;
-}
-
-.site-stats__grid {
-  display: grid;
-  gap: 0.45rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-bottom: 0;
-  max-width: none;
-}
-
-.site-stats__metric {
-  border: 1px solid var(--global-divider-color);
-  border-radius: 6px;
-  min-width: 0;
-  padding: 0.34rem 0.5rem;
-}
-
-.site-stats__value {
-  color: var(--global-text-color);
-  display: block;
-  font-size: 0.82rem;
-  font-weight: 650;
-  line-height: 1.15;
-}
-
-.site-stats__label {
-  color: var(--global-text-color-light);
-  display: block;
-  font-size: 0.6rem;
-  line-height: 1.2;
-  margin-top: 0.12rem;
-  text-transform: lowercase;
-}
-
-.site-stats__trend {
-  align-items: stretch;
-  border: 1px dashed var(--global-divider-color);
-  border-radius: 6px;
-  display: grid;
-  gap: 0.55rem;
-  grid-template-columns: minmax(88px, 0.25fr) 1fr;
-  padding: 0.34rem 0.5rem;
-}
-
-.site-stats__trend-chart {
-  align-items: center;
-  display: flex;
-  min-height: 2.45rem;
-}
-
-.site-stats__trend-chart svg {
-  display: block;
-  height: 2.2rem;
-  overflow: visible;
-  width: 100%;
-}
-
-.site-stats__trend-chart .trend-grid {
-  stroke: var(--global-divider-color);
-  stroke-width: 1;
-}
-
-.site-stats__trend-chart .trend-area {
-  fill: var(--global-theme-color);
-  opacity: 0.1;
-}
-
-.site-stats__trend-chart .trend-line {
-  fill: none;
-  stroke: var(--global-theme-color);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 3;
-}
-
-.site-stats__trend-chart .trend-dot {
-  fill: var(--global-theme-color);
-  stroke: var(--global-bg-color);
-  stroke-width: 2;
-}
-
-.site-stats__trend-summary {
-  align-self: center;
-  min-width: 0;
-}
-
-.site-stats__trend-kicker {
-  color: var(--global-text-color-light);
-  display: block;
-  font-size: 0.58rem;
-  letter-spacing: 0;
-  line-height: 1.1;
-  margin-bottom: 0.12rem;
-  text-transform: uppercase;
-}
-
-.site-stats__trend-value {
-  color: var(--global-text-color);
-  display: block;
-  font-size: 0.78rem;
-  font-weight: 650;
-  line-height: 1.25;
-  margin-bottom: 0.1rem;
-}
-
-.site-stats__trend-date {
-  color: var(--global-text-color-light);
-  display: block;
-  font-size: 0.6rem;
-  line-height: 1.25;
-  margin-top: 0.12rem;
-}
-
-.site-stats__trend a {
-  color: var(--global-theme-color);
-  font-size: 0.84rem;
-  font-weight: 650;
-}
-
-.site-stats__trend-chart.is-empty {
-  border: 1px solid var(--global-divider-color);
-  border-radius: 6px;
-  justify-content: center;
-  min-height: 2.2rem;
-}
-
-.site-stats__trend-chart.is-empty svg {
-  opacity: 0.55;
-}
-
-.site-stats__trend.is-loading .trend-line {
-  stroke-dasharray: 5 7;
-}
-
-.site-stats__trend p {
-  max-width: 32rem;
-}
-
 @media (min-width: 576px) {
   .post > article > .profile {
     max-width: 18%;
@@ -362,32 +185,6 @@ latest_posts:
     margin-top: 1.65rem;
   }
 
-  .site-stats__header {
-    align-items: flex-start;
-    display: block;
-  }
-
-  .site-stats {
-    display: block;
-    margin-top: 1.35rem;
-    padding-top: 0.75rem;
-  }
-
-  .site-stats__header p {
-    margin-top: 0.35rem;
-    max-width: none;
-    text-align: left;
-  }
-
-  .site-stats__grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 0.45rem;
-  }
-
-  .site-stats__trend {
-    grid-template-columns: 1fr;
-  }
-
   .post > article .publications ol.bibliography li .abbr {
     flex: 0 0 auto;
     max-width: none;
@@ -402,7 +199,7 @@ latest_posts:
 }
 </style>
 
-I am a **third-year Ph.D. student** at the College of Computer Science and Technology, Zhejiang University, advised by **[Zhongxin Liu](https://zhongxin-liu.github.io/) and Shanping Li**. My research focuses on **large language models for code generation**, with broader interests in large language models, **code-change understanding**, and **coding agents**. I was fortunate to intern at **Alibaba Future Life Lab** and **ByteDance Douyin AI4SE**. Over the past two years, I have published or had accepted **four first-author CCF-A papers** in software engineering and related areas, including work in **ACM TOSEM**, **ASE**, and **ACL**.
+I am a **third-year Ph.D. student** at the College of Computer Science and Technology, Zhejiang University, advised by **[Zhongxin Liu](https://zhongxin-liu.github.io/) and Shanping Li**. My research focuses on **large language models for code generation**, with broader interests in large language models, **code-change understanding**, and **coding agents**. I was fortunate to intern at **Taotian Future Life Lab** and **ByteDance Douyin AI4SE**, and I am currently interning with **Baidu's ERNIE Bot team**. Over the past two years, I have published or had accepted **four first-author CCF-A papers** in software engineering and related areas, including work in **ACM TOSEM**, **ASE**, and **ACL**.
 
 <div class="research-focus">
   <span>Code generation</span>
@@ -411,46 +208,9 @@ I am a **third-year Ph.D. student** at the College of Computer Science and Techn
   <span>LLM post-training</span>
 </div>
 
-<section class="site-stats" id="site-stats" aria-labelledby="site-stats-heading">
-  <div class="site-stats__header">
-    <h2 id="site-stats-heading">traffic</h2>
-    <p>Aggregate public counters, sampled daily.</p>
-  </div>
-
-  <div class="site-stats__grid">
-    <div class="site-stats__metric" id="busuanzi_container_site_pv">
-      <span class="site-stats__value" id="busuanzi_value_site_pv">--</span>
-      <span class="site-stats__label">views</span>
-    </div>
-    <div class="site-stats__metric" id="busuanzi_container_site_uv">
-      <span class="site-stats__value" id="busuanzi_value_site_uv">--</span>
-      <span class="site-stats__label">visitors</span>
-    </div>
-  </div>
-
-  <div class="site-stats__trend">
-    <div class="site-stats__trend-chart is-empty" aria-hidden="true">
-      <svg id="site-stats-trend-chart" viewBox="0 0 320 88" role="img">
-        <line class="trend-grid" x1="4" x2="316" y1="74" y2="74"></line>
-        <line class="trend-grid" x1="4" x2="316" y1="44" y2="44"></line>
-        <path class="trend-area" id="site-stats-trend-area"></path>
-        <polyline class="trend-line" id="site-stats-trend-line" points="4,66 48,58 92,62 136,43 180,47 224,31 268,35 316,21"></polyline>
-        <circle class="trend-dot" id="site-stats-trend-dot" cx="316" cy="21" r="4"></circle>
-      </svg>
-    </div>
-    <div class="site-stats__trend-summary">
-      <span class="site-stats__trend-kicker">daily trend</span>
-      <strong class="site-stats__trend-value" id="site-stats-trend-value">waiting for first sample</strong>
-      <p id="site-stats-trend-note">
-        Built from public aggregate counters and updated once per day.
-      </p>
-      <span class="site-stats__trend-date" id="site-stats-trend-date">No historical sample has been collected yet.</span>
-    </div>
-  </div>
-</section>
-
-<script type="application/json" id="site-stats-history">
-  {{ site.data.site_stats_history | jsonify }}
-</script>
+<div class="d-none" aria-hidden="true">
+  <span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv">--</span></span>
+  <span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv">--</span></span>
+</div>
 
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
