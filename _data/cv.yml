@@ -22,6 +22,13 @@ cv:
           - "Research focus: LLM-based code generation and software engineering."
 
     Experience:
+      - company: Baidu ERNIE Bot Team
+        position: Research Intern
+        location: China
+        start_date:
+        end_date: present
+        summary: Working on large language model applications and code intelligence for ERNIE Bot.
+
       - company: ByteDance Douyin AI4SE
         position: Research Intern
         location: China
@@ -34,7 +41,7 @@ cv:
         location: China
         start_date:
         end_date:
-        summary: Worked on applied AI research in future-life and intelligent-system scenarios.
+        summary: Conducted applied AI research for future-life and intelligent systems.
 
     Research:
       - name: LLM-based Code Generation
@@ -49,7 +56,7 @@ cv:
         highlights:
           - CCF-Huawei Populus Grove Fund project.
           - Tencent Rhino-Bird special project.
-          - Huawei million-level industry collaboration project.
+          - Huawei industry collaboration project.
 
     Publications:
       - title: "ReCode: Reinforcing Code Generation with Reasoning-Process Rewards"
@@ -131,19 +138,19 @@ cv:
         summary: Core research contributor to an industry-academic project on software engineering intelligence.
         highlights:
           - Code LLM training and evaluation.
-          - Real software engineering demand translation.
+          - Translation of real software engineering needs into research problems.
 
       - name: Tencent Rhino-Bird Special Project
-        summary: Core contributor to Tencent-collaborated research on code intelligence and code completion.
+        summary: Core contributor to a Tencent collaboration on code intelligence and code completion.
         highlights:
           - Related collaborative work accepted to FSE 2026.
           - Focus on latency-accuracy trade-offs for code completion.
 
       - name: Huawei Industry Collaboration Project
-        summary: Core research contributor to a million-level Huawei horizontal project.
+        summary: Core research contributor to a Huawei industry collaboration project.
         highlights:
           - Practical software engineering scenarios.
-          - Code model optimization and evaluation.
+          - Code LLM optimization and evaluation.
 
     Skills:
       - name: Research Areas
