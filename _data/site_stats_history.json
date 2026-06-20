@@ -1,6 +1,6 @@
 {
   "source": "busuanzi",
-  "updated_at": "2026-06-19T20:04:50.349Z",
+  "updated_at": "2026-06-20T19:57:51.323Z",
   "samples": [
     {
       "date": "2026-06-11",
@@ -55,6 +55,12 @@
       "page_pv": 35,
       "site_pv": 35,
       "site_uv": 20
+    },
+    {
+      "date": "2026-06-21",
+      "page_pv": 36,
+      "site_pv": 36,
+      "site_uv": 21
     }
   ]
 }
