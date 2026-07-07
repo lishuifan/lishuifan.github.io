@@ -15,7 +15,7 @@ cv:
         location: Hangzhou, China
         area: Computer Science and Technology
         studyType: Ph.D. Student
-        start_date: "2023"
+        start_date: "2023-09"
         end_date: present
         highlights:
           - College of Computer Science and Technology.
@@ -25,8 +25,8 @@ cv:
         location: Nanjing, China
         area: Software Engineering
         studyType: M.Eng.
-        start_date: "2020"
-        end_date: "2023"
+        start_date: "2020-09"
+        end_date: "2023-06"
         highlights:
           - State Key Laboratory for Novel Software Technology.
 
@@ -34,8 +34,8 @@ cv:
         location: Tianjin, China
         area: Software Engineering
         studyType: B.Eng.
-        start_date: "2016"
-        end_date: "2020"
+        start_date: "2016-09"
+        end_date: "2020-06"
         highlights:
           - "GPA: top 10%."
 
@@ -43,22 +43,22 @@ cv:
       - company: Baidu ERNIE Bot Team
         position: Research Intern
         location: China
-        start_date: "2026.05"
+        start_date: "2026-05"
         end_date: present
         summary: Working on large language model applications and code intelligence for ERNIE Bot.
 
       - company: ByteDance Douyin AI4SE
         position: Research Intern
         location: China
-        start_date: "2026.04"
-        end_date: "2026.05"
+        start_date: "2026-04"
+        end_date: "2026-05"
         summary: Worked on AI for software engineering and code intelligence problems in practical development settings.
 
       - company: Taotian Future Life Lab
         position: Research Intern
         location: China
-        start_date: "2025.04"
-        end_date: "2025.08"
+        start_date: "2025-04"
+        end_date: "2025-08"
         summary: Conducted applied AI research for future-life and intelligent systems.
 
     # Note: sections without a dedicated template (like this one) only render
@@ -167,4 +167,5 @@ cv:
       - name: Research Areas
         level: Advanced
         icon: fa-solid fa-code
+        summary: LLM-based code generation, software engineering, code-change understanding, fault-guided fine-tuning, reinforcement learning, coding agents.
         keywords: "LLM-based code generation, software engineering, code-change understanding, fault-guided fine-tuning, reinforcement learning, coding agents"
