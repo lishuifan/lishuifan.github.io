@@ -21,42 +21,53 @@ cv:
           - College of Computer Science and Technology.
           - "Research focus: LLM-based code generation and software engineering."
 
+      - institution: Nanjing University
+        location: Nanjing, China
+        area: Software Engineering
+        studyType: M.Eng.
+        start_date: "2020"
+        end_date: "2023"
+        highlights:
+          - State Key Laboratory for Novel Software Technology.
+
+      - institution: Tianjin University
+        location: Tianjin, China
+        area: Software Engineering
+        studyType: B.Eng.
+        start_date: "2016"
+        end_date: "2020"
+        highlights:
+          - "GPA: top 10%."
+
     Experience:
       - company: Baidu ERNIE Bot Team
         position: Research Intern
         location: China
-        start_date:
+        start_date: "2026.05"
         end_date: present
         summary: Working on large language model applications and code intelligence for ERNIE Bot.
 
       - company: ByteDance Douyin AI4SE
         position: Research Intern
         location: China
-        start_date:
-        end_date:
+        start_date: "2026.04"
+        end_date: "2026.05"
         summary: Worked on AI for software engineering and code intelligence problems in practical development settings.
 
       - company: Taotian Future Life Lab
         position: Research Intern
         location: China
-        start_date:
-        end_date:
+        start_date: "2025.04"
+        end_date: "2025.08"
         summary: Conducted applied AI research for future-life and intelligent systems.
 
+    # Note: sections without a dedicated template (like this one) only render
+    # entries with a `bullet` or `label` key; name/summary/highlights entries
+    # would render as an empty card.
     Research:
-      - name: LLM-based Code Generation
-        summary: Studies training, evaluation, and optimization methods for code LLMs, including fault-guided fine-tuning, keyword-enhanced prompting, and reasoning-process reward learning.
-        highlights:
-          - Code LLM capability evaluation.
-          - Code-change understanding.
-          - Repository-aware and agent-oriented software engineering.
-
-      - name: Industry Collaboration
-        summary: Core contributor to projects with Huawei and Tencent, translating practical software engineering needs into model training, evaluation, and optimization problems.
-        highlights:
-          - CCF-Huawei Populus Grove Fund project.
-          - Tencent Rhino-Bird special project.
-          - Huawei industry collaboration project.
+      - bullet: "**LLM-based Code Generation** — training, evaluation, and optimization methods for code LLMs, including fault-guided fine-tuning, keyword-enhanced prompting, and reasoning-process reward learning."
+      - bullet: "**Code-Change Understanding** — systematic studies of LLM capabilities on code review generation, commit message generation, and just-in-time comment update."
+      - bullet: "**Industry Collaboration** — core contributor to projects with Huawei and Tencent (CCF-Huawei Populus Grove Fund, Tencent Rhino-Bird special project), translating practical software engineering needs into model training, evaluation, and optimization problems."
 
     Publications:
       - title: "ReCode: Reinforcing Code Generation with Reasoning-Process Rewards"
