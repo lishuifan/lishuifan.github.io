@@ -199,7 +199,7 @@ latest_posts:
 }
 </style>
 
-I am a **third-year Ph.D. student** at the College of Computer Science and Technology, Zhejiang University, advised by **[Zhongxin Liu](https://zhongxin-liu.github.io/)** and **Shanping Li**. My research focuses on **large language models for code generation**, with broader interests in **code-change understanding**, **coding agents**, and **LLM post-training**. I was fortunate to intern at **Taotian Future Life Lab** and **Douyin AI4SE, ByteDance**, and I am currently interning with **Baidu’s ERNIE Bot team**. Over the past two years, **four of my first-author CCF-A papers** have been published or accepted in software engineering and related areas, including work in **ACM TOSEM**, **ASE**, and **ACL**.
+I am a **third-year Ph.D. student** at the College of Computer Science and Technology, Zhejiang University, advised by **[Zhongxin Liu](https://zhongxin-liu.github.io/)** and **Shanping Li**. My research focuses on **large language models for code generation**, with broader interests in **code-change understanding**, **coding agents**, and **LLM post-training**. I was fortunate to intern at **Taotian Future Life Lab** and **Douyin AI4SE, ByteDance**, and I am currently interning with **Baidu’s ERNIE Bot team**. Over the past two years, **three of my first-author CCF-A papers** have been published or accepted in **ACM TOSEM**, **ASE**, and **ACL**, along with a first-author paper in **Findings of ACL**.
 
 <div class="research-focus">
   <span>Code generation</span>
