@@ -1,3 +1,27 @@
 metadata:
-  last_updated:
-papers: {}
+  last_updated: '2026-07-15'
+papers:
+  6i_8HFAAAAAJ:Tyk-4Ss8FVUC:
+    citations: 28
+    title: 'ReCode: Reinforcing Code Generation with Reasoning-Process Rewards'
+    year: '2025'
+  6i_8HFAAAAAJ:W7OEmFMy1HYC:
+    citations: 10
+    title: 'SEK: Self-Explained Keywords Empower Large Language Models for Code Generation'
+    year: '2025'
+  6i_8HFAAAAAJ:Y0pCki6q_DkC:
+    citations: 2
+    title: Balancing Latency and Accuracy of Code Completion via Local-Cloud Model Cascading
+    year: '2026'
+  6i_8HFAAAAAJ:YsMSGLbcyi4C:
+    citations: 0
+    title: 'ZeroCoder: Can LLMs Improve Code Generation Without Ground-Truth Supervision?'
+    year: '2026'
+  6i_8HFAAAAAJ:_FxGoFyzp5QC:
+    citations: 6
+    title: 'FGIT: Fault-Guided Fine-Tuning for Code Generation'
+    year: '2025'
+  6i_8HFAAAAAJ:zYLM7Y9cAGgC:
+    citations: 72
+    title: Exploring the capabilities of llms for code-change-related tasks
+    year: '2025'
