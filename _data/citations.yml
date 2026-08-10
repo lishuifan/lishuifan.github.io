@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-07-15'
+  last_updated: '2026-08-10'
 papers:
   6i_8HFAAAAAJ:Tyk-4Ss8FVUC:
-    citations: 28
+    citations: 33
     title: 'ReCode: Reinforcing Code Generation with Reasoning-Process Rewards'
     year: '2025'
   6i_8HFAAAAAJ:W7OEmFMy1HYC:
@@ -14,14 +14,14 @@ papers:
     title: Balancing Latency and Accuracy of Code Completion via Local-Cloud Model Cascading
     year: '2026'
   6i_8HFAAAAAJ:YsMSGLbcyi4C:
-    citations: 0
+    citations: 1
     title: 'ZeroCoder: Can LLMs Improve Code Generation Without Ground-Truth Supervision?'
     year: '2026'
   6i_8HFAAAAAJ:_FxGoFyzp5QC:
-    citations: 6
+    citations: 7
     title: 'FGIT: Fault-Guided Fine-Tuning for Code Generation'
     year: '2025'
   6i_8HFAAAAAJ:zYLM7Y9cAGgC:
-    citations: 72
+    citations: 79
     title: Exploring the capabilities of llms for code-change-related tasks
     year: '2025'
