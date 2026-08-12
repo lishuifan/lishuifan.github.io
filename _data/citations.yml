@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-10'
+  last_updated: '2026-08-12'
 papers:
   6i_8HFAAAAAJ:Tyk-4Ss8FVUC:
     citations: 33
@@ -22,6 +22,6 @@ papers:
     title: 'FGIT: Fault-Guided Fine-Tuning for Code Generation'
     year: '2025'
   6i_8HFAAAAAJ:zYLM7Y9cAGgC:
-    citations: 79
+    citations: 82
     title: Exploring the capabilities of llms for code-change-related tasks
     year: '2025'
